@@ -6,7 +6,7 @@ EXPOSE 80
 # Imagem de build
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["TodoApi.csproj", "./"]
+COPY ["TodoApi/TodoApi.csproj", "TodoApi/"]
 RUN dotnet restore "TodoApi/TodoApi.csproj"
 COPY . .
 WORKDIR "/src/TodoApi"
