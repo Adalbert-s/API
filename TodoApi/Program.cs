@@ -35,7 +35,7 @@ app.UseSwaggerUI();
 // Health check
 app.MapGet("/", () => Results.Ok(new { status = "healthy" }));
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
 
