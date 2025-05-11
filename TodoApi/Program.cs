@@ -19,8 +19,8 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 
-
-//app.UseHttpsRedirection();
+app.MapGet("/", () => Results.Ok(new { status = "healthy" }));
+app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
